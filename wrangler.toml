@@ -1,0 +1,8 @@
+name = "bartender-render"
+account_id = "7a335541e1b18083f366ab2a1ee47596"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[browser]
+binding = "MYBROWSER"

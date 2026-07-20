@@ -1,4 +1,4 @@
-name = "bartender-render"
+name = "browser"
 account_id = "7a335541e1b18083f366ab2a1ee47596"
 main = "src/index.ts"
 compatibility_date = "2024-09-23"

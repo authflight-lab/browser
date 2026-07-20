@@ -8,6 +8,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@cloudflare/puppeteer": "^0.0.5"
+    "@cloudflare/puppeteer": "^1.1.0"
   }
 }

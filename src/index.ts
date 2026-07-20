@@ -66,8 +66,8 @@ export default {
       selector = ".card",
       waitFor = "window.__chartDone === true",
       quality = 92,
-      width = 2400,
-      height = 1600,
+      width = 1200,
+      height = 900,
     } = body;
 
     if (!html || typeof html !== "string") {
@@ -87,11 +87,11 @@ export default {
       const page = await browser.newPage();
 
       await page.setViewport({ width, height, deviceScaleFactor: 1 });
-      await page.setContent(fullHtml, { waitUntil: "load" });
+      await page.setContent(fullHtml, { waitUntil: "domcontentloaded" });
 
       if (waitFor) {
         try {
-          await page.waitForFunction(waitFor, { timeout: 8000 });
+          await page.waitForFunction(waitFor, { timeout: 8000, polling: 50 });
         } catch {
           // Chart/animation timeout is non-fatal; render whatever painted.
         }
